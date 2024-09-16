@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 export default function Project({ details, onMouseEnter, onMouseLeave}) {
 
     return (
-        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className="max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:border-white hover:border-3 hover:shadow-xl duration-500">
             <a href="#">
                 <img className="rounded-t-lg" src={details.image} alt="" />
             </a>
