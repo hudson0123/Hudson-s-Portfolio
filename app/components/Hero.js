@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <div className="grid grid-cols-2 h-screen bg-gradient-to-br from-[#333333] to-blue-500">
       <div className="grid place-content-center text-center">
-      <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Hello, I'm <span class={"text-transparent bg-clip-text bg-gradient-to-r via-yellow-200 from-white to-red-400 bg-300% animate-gradient"}>Hudson.</span></h1>
+      <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Hello, I&apos;m <span class={"text-transparent bg-clip-text bg-gradient-to-r via-yellow-200 from-white to-red-400 bg-300% animate-gradient"}>Hudson.</span></h1>
       <p class="text-4xl font-thin text-gray-500 lg:text-xl dark:text-gray-100">Aspiring Software Engineer & Student at The University of Georgia.</p>
       </div>
       <div className="grid relative place-content-center mr-20 ">

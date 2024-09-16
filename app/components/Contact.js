@@ -5,7 +5,7 @@ export default function Contact() {
     <div class="grid sm:grid-cols-2 items-start gap-16 p-4 py-80 mx-auto max-w-4xl bg-white font-[sans-serif]">
             <div>
                 <h1 class="text-gray-800 text-3xl font-extrabold">Send me a message.</h1>
-                <p class="text-sm text-gray-500 mt-4">Feel Free to Reach Out with Any Questions, Comments, or Requests, and I’ll Get Back to You as Soon as Possible!</p>
+                <p class="text-sm text-gray-500 mt-4">Feel Free to Reach Out with Any Questions, Comments, or Requests, and I&apos;ll Get Back to You as Soon as Possible!</p>
 
                 <div class="mt-12">
                     <h2 class="text-gray-800 text-base font-bold">Email</h2>
