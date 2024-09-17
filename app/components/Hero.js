@@ -14,7 +14,7 @@ export default function Hero() {
     : "blur-none duration-700 scale-100 ease-in-out";
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 h-screen bg-gradient-to-br from-[#333333] to-blue-500 w-full">
+    <div id="hero" className="grid grid-cols-1 md:grid-cols-2 h-[calc(100dvh)] bg-gradient-to-br from-[#333333] to-blue-500 w-full">
       <div className="flex flex-col justify-center items-center text-center p-4">
         <h1 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           Hello, I&apos;m{" "}

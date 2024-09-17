@@ -30,7 +30,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="grid sm:grid-cols-2 items-start gap-16 p-4 py-80 mx-auto max-w-4xl bg-white font-[sans-serif]">
+        <div id="contact" className="grid sm:grid-cols-2 items-start gap-16 p-4 py-80 mx-auto max-w-4xl bg-white font-[sans-serif]">
             <div>
                 <h1 className="text-[#48E5C2] drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,2)] text-3xl font-extrabold">Send me a message.</h1>
                 <p className="text-sm text-gray-500 mt-4">Feel free to reach out with any questions, comments, or requests, and I&apos;ll get back to you as soon as possible!</p>

@@ -5,7 +5,7 @@ import React from 'react'
 export default function About() {
   
   return (
-    <div className="grid px-20 place-content-center text-center bg-gradient-to-bl to-[#333333] from-blue-500 h-screen">
+    <div id="aboutme" className="grid px-20 place-content-center text-center bg-gradient-to-bl to-[#333333] from-blue-500 h-[calc(100dvh)]">
       <div>
         <p className='text-4xl font-thin text-gray-500 lg:text-xl dark:text-gray-100 px-40'>
         Currently, I am a Computer Science student at The University of Georgia, graduating in December 2024. 

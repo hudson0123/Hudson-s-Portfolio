@@ -33,9 +33,9 @@ export default function Projects() {
   };
 
   return (
-    <div className="relative">
+    <div id="projects" className="relative">
       {/* Grid layout with responsive design */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20 p-4 sm:pl-[65px] place-content-center text-center bg-gradient-to-br from-[#333333] to-blue-500 h-[90vh]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20 p-4 sm:pl-[65px] place-content-center text-center bg-gradient-to-br from-[#333333] to-blue-500 h-[calc(90dvh)]">
         <Project
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={() => handleMouseLeave(1)}
