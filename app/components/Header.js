@@ -10,7 +10,7 @@ export default function Header({ headerState, homeState }) {
   };
 
   const headerStyle = headerState
-    ? "text-black hover:text-[#FCFAF9] duration-300"
+    ? "text-black duration-300"
     : "text-[#FCFAF9] hover:text-black duration-300";
   const homeIcon = homeState ? "/home.svg" : "/home-white.svg";
 
@@ -58,17 +58,17 @@ export default function Header({ headerState, homeState }) {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden flex flex-col items-end space-y-3 p-4">
+        <div className="md:hidden flex flex-col place-content-end items-end space-y-3 p-4 bg-gray-800 opacity-80 rounded w-fit absolute right-3 top-15">
           <h1 className={"cursor-pointer text-nowrap hover:text-[17px] duration-300 " + headerStyle}>
-            <a href="#aboutme">About Me</a>
+            <a onClick={toggleMobileMenu} href="#aboutme">About Me</a>
           </h1>
           <h1 className={"cursor-pointer hover:text-[17px] duration-300 " + headerStyle}>
-            <a href="#projects">Projects</a>
+            <a onClick={toggleMobileMenu} href="#projects">Projects</a>
           </h1>
           <button
             className="bg-transparent hover:bg-[#48E5C2] text-[#48E5C2] hover:text-black px-4 py-0 border border-[#48E5C2] hover:border-black rounded duration-300"
           >
-            <a href="#contact">
+            <a onClick={toggleMobileMenu} href="#contact">
             Contact Me
             </a>
           </button>

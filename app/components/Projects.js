@@ -40,9 +40,12 @@ export default function Projects() {
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={() => handleMouseLeave(1)}
           details={{
-            title: "Portfolio Website",
-            date: "August, 2024",
-            description: "This is my Description",
+            title: "Kindred Therapy Website",
+            date: "July, 2024",
+            description: "Collaborated with local small business Kindred Therapy over the summer to develop a\
+            customer-facing website. Leveraged React, Next.js, and JavaScript to implement key\
+            interactive features, including appointment scheduling, dynamic FAQs, and a contact\
+            form, enhancing user engagement and functionality.",
             image: "/project2.png",
           }}
         />
@@ -50,19 +53,22 @@ export default function Projects() {
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={() => handleMouseLeave(2)}
           details={{
-            title: "Portfolio Website",
-            date: "August, 2024",
-            description: "This is my Description",
-            image: "/project1.jpg",
+            title: "JavaFX Snake Game",
+            date: "December 2022",
+            description: "Developed a playable snake game using JavaFX with adjustable gameplay settings. Incorporated object-oriented programming principles such as encapsulation, inheritance, polymorphism, and abstraction to enhance code modularity, reusability, and maintainability.",
+            image: "/project1.jpg", // Ensure you have an appropriate image for this project
           }}
         />
         <Project
           onMouseEnter={() => handleMouseEnter(3)}
           onMouseLeave={() => handleMouseLeave(3)}
           details={{
-            title: "Portfolio Website",
+            title: "Convolutional Classifier",
             date: "August, 2024",
-            description: "This is my Description",
+            description: "Designed and evaluated both linear and convolutional classifiers \
+            using Python and PyTorch on the CIFAR-10 dataset, which consists of 60,000 32x32 \
+            color images categorized into 10 classes. Applied optimization techniques such as \
+            batch normalization, ADAM, and dropout, achieving an accuracy rate exceeding 80%.",
             image: "/project3.jpg",
           }}
         />

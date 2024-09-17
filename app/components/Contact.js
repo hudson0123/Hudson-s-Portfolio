@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 export default function Contact() {
+    const [formSubmitted, setFormSubmitted] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -10,16 +11,26 @@ export default function Contact() {
     });
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        if (!formSubmitted) {
+            document.getElementById("submitInput").innerHTML = 'Loading';
+            e.preventDefault();
 
-        emailjs.send('service_nvez149', 'template_pfysblt', formData, '7Xniu4oQAodcmMsLw')
-            .then((result) => {
-                console.log(result.text);
-                alert("Message Sent Successfully!");
-            }, (error) => {
-                console.log(error.text);
-                alert("An error occurred. Please try again.");
-            });
+            emailjs.send('service_nvez149', 'template_pfysblt', formData, '7Xniu4oQAodcmMsLw')
+                .then((result) => {
+                    console.log(result.text);
+                    document.getElementById("nameInput").value = '';
+                    document.getElementById("subjectInput").value = '';
+                    document.getElementById("emailInput").value = '';
+                    document.getElementById("messageInput").value = '';
+                    document.getElementById("submitInput").innerHTML = 'Email Sent.';
+                }, (error) => {
+                    console.log(error.text);
+                    document.getElementById("submitInput").innerHTML = 'Email Sent.';
+                });
+            setFormSubmitted(true)
+        } else {
+            
+        }
     };
 
     const handleChange = (e) => {
@@ -30,9 +41,9 @@ export default function Contact() {
     };
 
     return (
-        <div id="contact" className="grid sm:grid-cols-2 items-start gap-16 p-4 py-80 mx-auto max-w-4xl bg-white font-[sans-serif]">
+        <div className="grid sm:grid-cols-2 items-start gap-16 p-4 py-80 mx-auto max-w-4xl bg-white font-[sans-serif]">
             <div>
-                <h1 className="text-[#48E5C2] drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,2)] text-3xl font-extrabold">Send me a message.</h1>
+                <h1  id="contact" className="text-[#48E5C2] drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,2)] text-3xl font-extrabold">Send me a message.</h1>
                 <p className="text-sm text-gray-500 mt-4">Feel free to reach out with any questions, comments, or requests, and I&apos;ll get back to you as soon as possible!</p>
 
                 <div className="mt-12">
@@ -66,8 +77,9 @@ export default function Contact() {
                 </div>
             </div>
 
-            <form className="ml-auto space-y-4 border-black border-1" onSubmit={handleSubmit}>
+            <form className="ml-auto space-y-4 border-black border-1">
                 <input 
+                    id="nameInput"
                     type='text' 
                     name='name' 
                     placeholder='Name'
@@ -77,6 +89,7 @@ export default function Contact() {
                     required
                 />
                 <input 
+                    id="emailInput"
                     type='email' 
                     name='email' 
                     placeholder='Email'
@@ -86,6 +99,7 @@ export default function Contact() {
                     required
                 />
                 <input 
+                    id="subjectInput"
                     type='text' 
                     name='subject' 
                     placeholder='Subject'
@@ -95,6 +109,7 @@ export default function Contact() {
                     required
                 />
                 <textarea 
+                    id="messageInput"
                     name='message'
                     placeholder='Message' 
                     rows="6"
@@ -104,9 +119,10 @@ export default function Contact() {
                     required
                 />
                 <button 
+                    onClick={handleSubmit}
+                    id="submitInput"
                     type='submit'
                     className="text-white bg-[#48E5C2] tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6"
-                    onClick={handleSubmit}
                 >
                     Send
                 </button>

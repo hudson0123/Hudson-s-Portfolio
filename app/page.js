@@ -14,13 +14,16 @@ export default function HomePage() {
   const [headerAlt, setHeaderAlt] = useState(false)
   const [homeAlt, setHomeAlt] = useState(false)
 
-  const fixedPoint = 3100;
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY || window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
 
-      if (scrollPosition >= fixedPoint) {
+      // Calculate if the user is within 20% of the bottom of the page
+      const threshold = documentHeight - (windowHeight * 1.1);
+
+      if (scrollPosition >= threshold) {
         setHeaderAlt(true);
         setHomeAlt(true);
       } else {
