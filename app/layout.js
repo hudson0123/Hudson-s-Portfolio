@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import "./globals.css";
 import {Fugaz_One} from "next/font/google"
+import { Analytics } from "@vercel/analytics/react"
 
 // Import Componenets
 import Header from "./components/Header"
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Analytics/>
         {children}
         {/* <Footer /> */}
       </body>

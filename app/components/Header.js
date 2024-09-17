@@ -58,7 +58,7 @@ export default function Header({ headerState, homeState }) {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden flex flex-col place-content-end items-end space-y-3 p-4 bg-gray-800 opacity-80 rounded w-fit absolute right-3 top-15">
+        <div className="md:hidden flex flex-col place-content-end items-end space-y-3 p-4 bg-gray-800  rounded w-fit absolute right-3 top-15">
           <h1 className={"cursor-pointer text-nowrap hover:text-[17px] duration-300 " + headerStyle}>
             <a onClick={toggleMobileMenu} href="#aboutme">About Me</a>
           </h1>
