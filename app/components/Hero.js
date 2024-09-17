@@ -1,28 +1,40 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 export default function Hero() {
-
-  const [imageBlur, setImageBlur] = useState(true)
+  const [imageBlur, setImageBlur] = useState(true);
 
   useEffect(() => {
-    setImageBlur(false)
-  }, [])
+    setImageBlur(false);
+  }, []);
 
-  const blurStyle = imageBlur ? "blur-sm duration-700 scale-50 ease-in-out" : "blur-none duration-700 scale-100 ease-in-out" 
-
+  const blurStyle = imageBlur
+    ? "blur-sm duration-700 scale-50 ease-in-out"
+    : "blur-none duration-700 scale-100 ease-in-out";
 
   return (
-    <div className="grid grid-cols-2 h-screen bg-gradient-to-br from-[#333333] to-blue-500">
-      <div className="grid place-content-center text-center">
-      <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">Hello, I&apos;m <span class={"text-transparent bg-clip-text bg-gradient-to-r via-yellow-200 from-white to-red-400 bg-300% animate-gradient"}>Hudson.</span></h1>
-      <p class="text-4xl font-thin text-gray-500 lg:text-xl dark:text-gray-100">Aspiring Software Engineer & Student at The University of Georgia.</p>
+    <div className="grid grid-cols-1 md:grid-cols-2 h-screen bg-gradient-to-br from-[#333333] to-blue-500 w-full">
+      <div className="flex flex-col justify-center items-center text-center p-4">
+        <h1 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          Hello, I&apos;m{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r via-yellow-200 from-white to-red-400 bg-300% animate-gradient">
+            Hudson.
+          </span>
+        </h1>
+        <p className="text-lg font-thin text-gray-500 md:text-xl lg:text-2xl dark:text-gray-100">
+          Aspiring Software Engineer & Student at The University of Georgia.
+        </p>
       </div>
-      <div className="grid relative place-content-center mr-20 ">
-        <img className={"h-90 max-w-lg transition-all rounded-2xl " + blurStyle} src="https://news.uga.edu/wp-content/uploads/2021/03/arch_sun_nosign.jpg" alt="uga"></img>
+
+      <div className="flex justify-center items-center p-4 md:p-0">
+        <img
+          className={"h-60 md:h-90 max-w-xs md:max-w-lg transition-all rounded-2xl " + blurStyle}
+          src="https://news.uga.edu/wp-content/uploads/2021/03/arch_sun_nosign.jpg"
+          alt="uga"
+          loading="lazy"
+        />
       </div>
     </div>
-  )
+  );
 }

@@ -1,71 +1,81 @@
-"use client"
+"use client";
 
-import React from 'react'
-import { useState } from 'react'
-import Project from './Project.js'
-import SkillsBar from './SkillsBar.js'
+import React, { useState } from 'react';
+import Project from './Project.js';
+import SkillsBar from './SkillsBar.js';
 
 export default function Projects() {
   
-  // Define separate hover states for each text
-  const [hoverText1, setHoverText1] = useState(false);
-  const [hoverText2, setHoverText2] = useState(false);
-  const [hoverText3, setHoverText3] = useState(false);
+  // Immutable state updates for hover states
+  const [hoverState, setHoverState] = useState({
+    hoverText1: false,
+    hoverText2: false,
+    hoverText3: false,
+  });
 
-  // Define handlers for each text element
-  const handleMouseEnter1 = () => setHoverText1(true);
-  const handleMouseLeave1 = () => setHoverText1(false);
+  // Handlers for hover states
+  const handleMouseEnter = (textNumber) => {
+    setHoverState(prevState => ({
+      ...prevState,
+      [`hoverText${textNumber}`]: true,
+    }));
+  };
 
-  const handleMouseEnter2 = () => setHoverText2(true);
-  const handleMouseLeave2 = () => setHoverText2(false);
-
-  const handleMouseEnter3 = () => setHoverText3(true);
-  const handleMouseLeave3 = () => setHoverText3(false);
+  const handleMouseLeave = (textNumber) => {
+    setHoverState(prevState => ({
+      ...prevState,
+      [`hoverText${textNumber}`]: false,
+    }));
+  };
 
   const handleClick = () => {
-    window.scrollTo(0,3300)
-  }
+    window.scrollTo(0, 3300);
+  };
 
-  
   return (
-    <div className="relative ">
-        <div className="grid grid-cols-3 pb-20 pl-[65px] place-content-center text-center bg-gradient-to-br from-[#333333] to-blue-500 h-[90vh]">
+    <div className="relative">
+      {/* Grid layout with responsive design */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20 p-4 sm:pl-[65px] place-content-center text-center bg-gradient-to-br from-[#333333] to-blue-500 h-[90vh]">
         <Project
-          onMouseEnter={handleMouseEnter1}
-          onMouseLeave={handleMouseLeave1}
+          onMouseEnter={() => handleMouseEnter(1)}
+          onMouseLeave={() => handleMouseLeave(1)}
           details={{
             title: "Portfolio Website",
             date: "August, 2024",
             description: "This is my Description",
-            image: "/project2.png"
+            image: "/project2.png",
           }}
         />
         <Project
-          onMouseEnter={handleMouseEnter2}
-          onMouseLeave={handleMouseLeave2}
+          onMouseEnter={() => handleMouseEnter(2)}
+          onMouseLeave={() => handleMouseLeave(2)}
           details={{
             title: "Portfolio Website",
             date: "August, 2024",
             description: "This is my Description",
-            image: "/project1.jpg"
+            image: "/project1.jpg",
           }}
         />
         <Project
-          onMouseEnter={handleMouseEnter3}
-          onMouseLeave={handleMouseLeave3}
+          onMouseEnter={() => handleMouseEnter(3)}
+          onMouseLeave={() => handleMouseLeave(3)}
           details={{
             title: "Portfolio Website",
             date: "August, 2024",
             description: "This is my Description",
-            image: "/project3.jpg"
+            image: "/project3.jpg",
           }}
         />
       </div>
-      <SkillsBar 
-        hover1={hoverText1}
-        hover2={hoverText2}
-        hover3={hoverText3}
-      />
+
+      {/* SkillsBar is hidden on mobile and visible from md (medium) screens */}
+      <div className="hidden md:block">
+        <SkillsBar 
+          hover1={hoverState.hoverText1}
+          hover2={hoverState.hoverText2}
+          hover3={hoverState.hoverText3}
+        />
+      </div>
     </div>
-  )
+  );
 }

@@ -8,9 +8,11 @@ export default function About() {
     <div className="grid px-20 place-content-center text-center bg-gradient-to-bl to-[#333333] from-blue-500 h-screen">
       <div>
         <p className='text-4xl font-thin text-gray-500 lg:text-xl dark:text-gray-100 px-40'>
-          Currently I am finishing up my bachelor&apos;s in Computer Science at The University of Georgia, 
-          set to graduate in December 2024. I have a variety of experience 
-          in technoloy but recently have been interested in building full stack web applicaitons.
+        Currently, I am a Computer Science student at The University of Georgia, graduating in December 2024. 
+        I work part-time as a Software Engineer Intern at Nymbus, where I work with technologies like Kubernetes, Java, and Python, 
+        enhancing my skills in software development and DevOps. I’m proficient in Python, PyTorch, and other programming languages, and I’m 
+        seeking opportunities in Software Engineering, Development, or similar roles where I can apply my knowledge and 
+        continue growing in the tech industry.
         </p>
       </div>
       <div className='m-10'>
