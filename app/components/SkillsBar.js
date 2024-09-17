@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function SkillsBar({ hover1, hover2, hover3 }) {
 
-    const project1 = hover1 ? 'blur-lg scale-[.5] duration-500 ' : 'blur-none scale-100 duration-500 ';
-    const project2 = hover2 ? 'blur-lg scale-[.5] duration-500 ' : 'blur-none scale-100 duration-500 ';
-    const project3 = hover3 ? 'blur-lg scale-[.5] duration-500 ' : 'blur-none scale-100 duration-500 ';
+    const project1 = hover1 ? 'blur-lg scale-[0] duration-500 ' : 'blur-none scale-100 duration-500 ';
+    const project2 = hover2 ? 'blur-lg scale-[0] duration-500 ' : 'blur-none scale-100 duration-500 ';
+    const project3 = hover3 ? 'blur-lg scale-[0] duration-500 ' : 'blur-none scale-100 duration-500 ';
 
     return (
         <div>
-            <div className="flex gap-6 justify-between px-10 bg-gradient-to-b from-[#f3d3bd] to-[#f1ede9] py-11 w-full">
+            <div className="flex gap-6 justify-between px-10 bg-gradient-to-b from-[#f3d3bd] to-[#f1ede9] py-7 w-full">
                 <div className="has-tooltip relative">
                     <img className={"h-[50px] object-contain " + project1 + project2 + project3} src="/aws-svgrepo-com.png" alt="Amazon Web Services" />
                     <p className="tooltip absolute left-[25px] bg-gray-400 px-2 rounded-lg font-mono text-xs text-nowrap">Amazon Web Services</p>
