@@ -21,7 +21,7 @@ export default function HomePage() {
       const documentHeight = document.documentElement.scrollHeight;
 
       // Calculate if the user is within 20% of the bottom of the page
-      const threshold = documentHeight - (windowHeight * 1.1);
+      const threshold = documentHeight - (windowHeight * 1.2);
 
       if (scrollPosition >= threshold) {
         setHeaderAlt(true);

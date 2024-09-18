@@ -20,7 +20,7 @@ export default function Header({ headerState, homeState }) {
         <div className="p-2 cursor-pointer">
           <a href="#hero">
             <img
-              className={"h-[40px] hover:scale-110 duration-300 " + headerStyle}
+              className={"h-[40px] hover:scale-110 duration-300" + headerStyle}
               src={homeIcon}
               alt="home"
             />
@@ -66,7 +66,7 @@ export default function Header({ headerState, homeState }) {
             <a onClick={toggleMobileMenu} href="#projects">Projects</a>
           </h1>
           <button
-            className="bg-transparent hover:bg-[#48E5C2] text-[#48E5C2] hover:text-black px-4 py-0 border border-[#48E5C2] hover:border-black rounded duration-300"
+            className="bg-transparent hover:bg-[#48E5C2] text-[#48E5C2] hover:text-black px-4 py-0 border font-bold border-[#48E5C2] hover:border-black rounded duration-300"
           >
             <a onClick={toggleMobileMenu} href="#contact">
             Contact Me

@@ -22,14 +22,14 @@ export default function Hero() {
             Hudson.
           </span>
         </h1>
-        <p className="text-lg font-thin text-gray-500 md:text-xl lg:text-2xl dark:text-gray-100">
+        <p className="text-lg text-white md:text-xl lg:text-2xl dark:text-white">
           Aspiring Software Engineer & Student at The University of Georgia.
         </p>
       </div>
 
       <div className="flex justify-center items-center p-4 md:p-0">
         <img
-          className={"h-60 md:h-90 max-w-xs md:max-w-lg transition-all rounded-2xl " + blurStyle}
+          className={"h-50 md:h-100 aspect-auto max-w-xs md:max-w-lg transition-all rounded-2xl " + blurStyle}
           src="https://news.uga.edu/wp-content/uploads/2021/03/arch_sun_nosign.jpg"
           alt="uga"
           loading="lazy"
