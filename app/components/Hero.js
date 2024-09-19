@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <div id="hero" className="grid grid-cols-1 md:grid-cols-2 h-[calc(100dvh)] bg-gradient-to-br from-[#333333] to-blue-500">
       <div className="flex flex-col justify-center items-center text-center p-4">
-        <h1 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+        <h1 className="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl">
           Hello, I&apos;m{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r via-yellow-200 from-white to-red-400 bg-300% animate-gradient">
             Hudson.

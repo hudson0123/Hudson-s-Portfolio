@@ -22,7 +22,7 @@ export default function Project({ details, onMouseEnter, onMouseLeave, index}) {
     const animationDelay = `${index * 400}ms`;
 
     return (
-        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ref={domRef} style={{ transitionDelay: animationDelay }} className={"max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:border-white hover:border-3 hover:shadow-xl " +  `delay-[${Math.floor(Math.random() * 10)*100}] fade-in-section ${isVisible ? 'is-visible' : ''}`}>
+        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} ref={domRef} style={{ transitionDelay: animationDelay }} className={"max-w-lg border ounded-lg shadow bg-gray-800 border-gray-700 hover:border-white hover:border-3 hover:shadow-xl " +  `delay-[${Math.floor(Math.random() * 10)*100}] fade-in-section ${isVisible ? 'is-visible' : ''}`}>
             <a href="#">
                 <img className="rounded-t-lg" src={details.image} alt="" />
             </a>
