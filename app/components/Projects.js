@@ -32,7 +32,7 @@ export default function Projects() {
   return (
     <div id="projects" className="relative">
       {/* Grid layout with responsive design */}
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20 px-4 sm:px-[65px] place-content-center text-center bg-gradient-to-br from-[#333333] to-blue-500 min-h-[90vh]">
+      <div className="relative grid grid-col-1 lg:grid-flow-col gap-20 py-10 px-4 sm:px-[65px] place-content-right text-center bg-[#f3f0e7] min-h-[70vh] overflow-x-scroll">
         <Project
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={() => handleMouseLeave(1)}
@@ -72,11 +72,24 @@ export default function Projects() {
           }}
           index = {3}
         />
+        <Project
+          onMouseEnter={() => handleMouseEnter(3)}
+          onMouseLeave={() => handleMouseLeave(3)}
+          details={{
+            title: "Convolutional Classifier",
+            date: "May, 2024",
+            description: "Designed and evaluated both linear and convolutional classifiers \
+            using Python and PyTorch on the CIFAR-10 dataset, which consists of 60,000 32x32 \
+            color images categorized into 10 classes. Applied optimization techniques such as \
+            batch normalization, ADAM, and dropout, achieving an accuracy rate exceeding 80%.",
+            image: "/project3.jpg",
+          }}
+          index = {3}
+        />
       </div>
       {/* SkillsBar is hidden on mobile and visible from md (medium) screens */}
       <div className="relative hidden md:block">
-      <img className="h-[300px] bottom-10 right-3 absolute rotate-3 transition delay-150 duration-300 ease-in-out opacity-1" src="/Drawing.png"/>
-        <SkillsBar 
+      <SkillsBar 
           hover1={hoverState.hoverText1}
           hover2={hoverState.hoverText2}
           hover3={hoverState.hoverText3}
