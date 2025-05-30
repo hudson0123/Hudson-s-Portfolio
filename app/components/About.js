@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div id="aboutme" className="grid px-4 md:px-20 place-content-center text-center bg-[#f3f0e7] min-h-[80vh]">
+    <div id="aboutme" className="grid px-4 md:px-20 place-content-center text-center bg-[#35FF69] min-h-[100vh]">
       <div>
         <p className='text-2xl md:text-2xl font-thin text-black lg:text-4xl px-4 md:px-20 '>
         Currently, I am a Software Engineer at Nymbus, where I contribute to internal tools and automation. I enjoy building full stack applications as personal projects, where I take ownership of the entire software engineering lifecycle — from initial design and backend logic to frontend development and deployment. I love working with Python and JavaScript, and often use frameworks like Django and Next.js/React to bring my ideas to life.

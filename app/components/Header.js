@@ -19,11 +19,9 @@ export default function Header({ headerState, homeState }) {
       <div className="grid grid-cols-2">
         <div className="p-2 cursor-pointer">
           <a href="#hero">
-            <img
-              className={"h-[40px] hover:scale-110 duration-300" + headerStyle}
-              src={homeIcon}
-              alt="home"
-            />
+            <p>
+              Hudson
+            </p>
           </a>
         </div>
 

@@ -32,7 +32,7 @@ export default function Projects() {
   return (
     <div id="projects" className="relative">
       {/* Grid layout with responsive design */}
-      <div className="relative grid grid-col-1 lg:grid-flow-col gap-20 py-10 px-4 sm:px-[65px] place-content-right text-center bg-[#f3f0e7] min-h-[70vh] overflow-x-scroll">
+      <div className="relative grid grid-col-1 lg:grid-flow-col gap-20 py-10 px-4 sm:px-[65px] place-content-right text-center bg-[#7494EA] min-h-[70vh] overflow-x-scroll">
         <Project
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={() => handleMouseLeave(1)}
